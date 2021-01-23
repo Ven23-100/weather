@@ -13,7 +13,7 @@ button.addEventListener('click',function(){
     var descValue=data['weather'][0]['description'];
 
     name.innerHTML=nameValue;
-    temp.innerHTML=tempValue;
+    temp.innerHTML=Math.round(tempValue-273)+String.fromCharCode(176)+'c';
     desc.innerHTML= descValue;
 })
 .catch(err => alert(" Enter a correct city name"))
